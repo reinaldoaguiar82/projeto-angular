@@ -11,7 +11,7 @@ import { Categoria } from "./categoria.module";
 })
 export class CategoriaService {
 
-  private apiPath : string = "api/categoria"
+  private apiPath : string = "api/categorias"
 
   constructor(
     private _http: HttpClient
@@ -62,6 +62,7 @@ export class CategoriaService {
   }
 
   private jsonDataToCategorias(jsonData: any[]): Categoria[]{
+    console.log(jsonData);
     const categorias: Categoria[] = [];
     jsonData.forEach(element => categorias.push(element as Categoria));
     return categorias;
