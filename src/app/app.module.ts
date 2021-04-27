@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDatabase } from './in-memory-database';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { InMemoryDatabase } from './in-memory-database';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+	  ToastrModule.forRoot(),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase)
   ],
   providers: [],
