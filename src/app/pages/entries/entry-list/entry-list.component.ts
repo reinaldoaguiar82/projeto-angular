@@ -14,7 +14,7 @@ export class EntryListComponent implements OnInit {
   constructor(
     private _entryService : EntryService
   ) { 
-    console.log('teste');
+    
   }
 
   ngOnInit(): void {
